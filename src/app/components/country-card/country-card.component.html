@@ -1,9 +1,9 @@
 <mat-card class="country-card">
-  <img mat-card-image src="https://flagcdn.com/w320/dk.png" alt="Country flag">
+  <img mat-card-image src="{{flag}}" alt="Country flag" height="175">
   <mat-card-content>
-    <p class="country-name">Germany</p>
-    <p><strong>Population:</strong> 81,770,900</p>
-    <p><strong>Region:</strong> Europe</p>
-    <p><strong>Capital:</strong> Berlin</p>
+    <p class="country-name">{{name}}</p>
+    <p><strong>Population:</strong> {{ population }}</p>
+    <p><strong>Region:</strong> {{ region }}</p>
+    <p><strong>Capital:</strong> {{ capital }}</p>
   </mat-card-content>
 </mat-card>

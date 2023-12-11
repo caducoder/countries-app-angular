@@ -1,5 +1,6 @@
 .country-card {
   max-width: 300px;
+  height: 370px;
 
   .country-name {
     margin: 15px 0 10px;

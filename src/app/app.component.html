@@ -27,7 +27,9 @@
   </div>
 
   <section class="countries-list">
-    <app-country-card></app-country-card>
+    <app-country-card *ngFor="let ct of countries" name="{{ct.name.common}}" population="{{ct.population}}"
+      capital="{{ct.capital}}" region="{{ct.region}}" flag="{{ct.flagUrl}}">
+    </app-country-card>
   </section>
 
 </main>
