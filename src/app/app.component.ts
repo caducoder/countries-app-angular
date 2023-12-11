@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'countries-app';
+  regions: string[] = ["africa", "america", "asia", "europe", "oceania"]
+  selectedRegion: string = ''
 }

@@ -1,1 +1,33 @@
-<h1>Contries App</h1>
+<mat-toolbar>
+  <p class="logo">Where in the world?</p>
+  <span class="example-spacer"></span>
+  <button class="darkmode-button" aria-label="Dark mode">
+    <mat-icon>dark_mode</mat-icon>
+    Dark Mode
+  </button>
+</mat-toolbar>
+
+<main class="container">
+
+  <div class="grid-header">
+    <div class="searchbox">
+      <mat-icon class="icon">search</mat-icon>
+      <input type="text" placeholder="Search for a country..." class="search" />
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Filter by Region</mat-label>
+        <mat-select [(value)]="selectedRegion" class="region-dropdown">
+          <mat-option *ngFor="let reg of regions" [value]="reg">
+            <span class="reg-option">{{reg}}</span>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <section class="countries-list">
+    <app-country-card></app-country-card>
+  </section>
+
+</main>
