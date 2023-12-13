@@ -11,4 +11,9 @@
   strong {
     font-weight: 600;
   }
+
+  &.dark {
+    background-color: rgb(43, 57, 69);
+    color: #fff
+  }
 }

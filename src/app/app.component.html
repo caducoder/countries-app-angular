@@ -1,23 +1,20 @@
-<mat-toolbar>
+<mat-toolbar class="toolbar" [ngClass]="currentMode">
   <p class="logo">Where in the world?</p>
   <span class="example-spacer"></span>
-  <button class="darkmode-button" aria-label="Dark mode">
-    <mat-icon>dark_mode</mat-icon>
-    Dark Mode
-  </button>
+  <app-darkmode-toggle></app-darkmode-toggle>
 </mat-toolbar>
 
-<main class="container">
+<main class="container" [ngClass]="currentMode">
 
   <div class="grid-header">
     <div class="searchbox">
-      <mat-icon class="icon">search</mat-icon>
-      <input type="text" placeholder="Search for a country..." class="search" />
+      <mat-icon class="icon" [ngClass]="currentMode">search</mat-icon>
+      <input type="text" placeholder="Search for a country..." class="search" [ngClass]="currentMode" />
     </div>
     <div>
       <mat-form-field>
         <mat-label>Filter by Region</mat-label>
-        <mat-select [(value)]="selectedRegion" class="region-dropdown">
+        <mat-select [(value)]="selectedRegion" class="region-dropdown" panelClass="{{currentMode}}">
           <mat-option *ngFor="let reg of regions" [value]="reg">
             <span class="reg-option">{{reg}}</span>
           </mat-option>

@@ -1,0 +1,9 @@
+.darkmode-button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  gap: 5px;
+}

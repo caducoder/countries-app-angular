@@ -14,11 +14,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CountryCardComponent } from './components/country-card/country-card.component';
+import { DarkmodeToggleComponent } from './components/darkmode-toggle/darkmode-toggle.component';
+import { ModeToggleService } from './components/darkmode-toggle/darkmode-toggle.service';
+import { MODE_STORAGE_SERVICE, ModeLocalStorageService } from './components/darkmode-toggle/darkmode-storage.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CountryCardComponent
+    CountryCardComponent,
+    DarkmodeToggleComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,13 @@ import { CountryCardComponent } from './components/country-card/country-card.com
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ModeToggleService,
+    {
+      provide: MODE_STORAGE_SERVICE,
+      useClass: ModeLocalStorageService,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
