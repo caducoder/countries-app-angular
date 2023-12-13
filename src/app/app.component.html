@@ -14,7 +14,9 @@
     <div>
       <mat-form-field>
         <mat-label>Filter by Region</mat-label>
-        <mat-select [(value)]="selectedRegion" class="region-dropdown" panelClass="{{currentMode}}">
+        <mat-select (selectionChange)="filterByRegion()" [(value)]="selectedRegion" class="region-dropdown"
+          panelClass="{{currentMode}}">
+          <mat-option></mat-option>
           <mat-option *ngFor="let reg of regions" [value]="reg">
             <span class="reg-option">{{reg}}</span>
           </mat-option>
@@ -24,7 +26,7 @@
   </div>
 
   <section class="countries-list">
-    <app-country-card *ngFor="let ct of countries" name="{{ct.name.common}}" population="{{ct.population}}"
+    <app-country-card *ngFor="let ct of filteredCountries" name="{{ct.name.common}}" population="{{ct.population}}"
       capital="{{ct.capital}}" region="{{ct.region}}" flag="{{ct.flagUrl}}">
     </app-country-card>
   </section>

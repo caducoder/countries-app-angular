@@ -73,6 +73,10 @@
 }
 
 .toolbar {
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.39);
+
   &.dark {
     background-color: rgb(43, 57, 69);
     color: #fff;
