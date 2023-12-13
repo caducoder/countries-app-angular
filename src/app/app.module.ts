@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -17,12 +18,18 @@ import { CountryCardComponent } from './components/country-card/country-card.com
 import { DarkmodeToggleComponent } from './components/darkmode-toggle/darkmode-toggle.component';
 import { ModeToggleService } from './components/darkmode-toggle/darkmode-toggle.service';
 import { MODE_STORAGE_SERVICE, ModeLocalStorageService } from './components/darkmode-toggle/darkmode-storage.service';
+import { CountriesListComponent } from './pages/countries-list/countries-list.component';
+
+const routes: Routes = [
+  { path: '', component: CountriesListComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     CountryCardComponent,
-    DarkmodeToggleComponent
+    DarkmodeToggleComponent,
+    CountriesListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,8 @@ import { MODE_STORAGE_SERVICE, ModeLocalStorageService } from './components/dark
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     ModeToggleService,
