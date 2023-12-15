@@ -47,4 +47,16 @@ export class CountriesListComponent {
       this.filteredCountries = this.countries;
     }
   }
+
+  filterByName(text: string) {
+    console.log(text)
+    if (!text) {
+      this.filteredCountries = this.countries
+      return
+    }
+
+    this.filteredCountries = this.countries.filter(
+      country => country?.name.common.toLowerCase().includes(text.toLowerCase())
+    )
+  }
 }
