@@ -35,7 +35,6 @@ export class CountriesListComponent {
       .subscribe((resp) => {
         const paises = resp
           .map((ct) => ({ ...ct, population: new Intl.NumberFormat().format(ct.population), capital: ct.capital?.at(0), flagUrl: ct.flags.png }))
-        console.log(paises)
         this.countries = paises;
         this.filteredCountries = paises;
       })
