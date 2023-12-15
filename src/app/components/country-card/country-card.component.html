@@ -1,4 +1,4 @@
-<mat-card class="country-card" [ngClass]="currentMode === 'light' ? 'light' : 'dark'">
+<mat-card [routerLink]="['/', name]" class="country-card" [ngClass]="currentMode === 'light' ? 'light' : 'dark'">
   <img mat-card-image src="{{flag}}" alt="Country flag" height="175">
   <mat-card-content>
     <p class="country-name">{{name}}</p>

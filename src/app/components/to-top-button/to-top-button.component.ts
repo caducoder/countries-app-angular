@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
       <mat-icon class="icon">arrow_upward</mat-icon>
     </button>
   `,
-  styleUrls: ['./to-top-button.component.css']
+  styleUrls: ['./to-top-button.component.css'] //TODO: fix z-index
 })
 export class ToTopButtonComponent implements OnInit {
 

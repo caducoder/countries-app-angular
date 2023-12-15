@@ -13,4 +13,8 @@ export class CountryService {
   getAllCountries(): Observable<Country[]> {
     return this.httpClient.get<Country[]>("https://restcountries.com/v3.1/all?fields=name,flags,capital,population,region")
   }
+
+  getByFullName(countryName: string) {
+    return this.httpClient.get<Country[]>(`https://restcountries.com/v3.1/name/${countryName}?fullText=true&fields=name,flags,capital,population,region,currencies,subregion,tld,languages,borders`)
+  }
 }

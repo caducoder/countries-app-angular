@@ -13,7 +13,7 @@ export class AppComponent {
   title: string = 'countries-app'
   currentMode: Mode = Mode.LIGHT;
 
-  constructor(private countryService: CountryService, private modeToggleService: ModeToggleService) {
+  constructor(private modeToggleService: ModeToggleService) {
     this.modeToggleService.modeChanged$.subscribe((mode: Mode) => {
       this.currentMode = mode;
     });

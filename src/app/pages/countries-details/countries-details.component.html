@@ -1,0 +1,33 @@
+<div [ngClass]="currentMode">
+  <button aria-label="Back" class="back-button" (click)="goBack()">
+    <mat-icon>west</mat-icon>
+    Back
+  </button>
+
+  <main class="container">
+    <div>
+      <img mat-card-image src="{{country.flags.png}}" alt="{{country.name.common}} flag" height="225">
+    </div>
+    <div class="country-info">
+      <h1 class="title">{{country.name.common}}</h1>
+      <div class="details">
+        <div>
+          <p><strong>Native Name:</strong> {{country.name.nativeName}}</p>
+          <p><strong>Population:</strong> {{country.population}}</p>
+          <p><strong>Region:</strong> {{country.region}}</p>
+          <p><strong>Sub Region:</strong> {{country.subregion}}</p>
+          <p><strong>Capital:</strong> {{country.capital}}</p>
+        </div>
+        <div>
+          <p><strong>Top Level Domain:</strong> {{country.tld}}</p>
+          <p><strong>Currencies:</strong> {{country.currencies}}</p>
+          <p><strong>Languages:</strong> {{country.languages}}</p>
+        </div>
+      </div>
+      <div class="borders">
+        <p><strong>Borders:</strong> {{country.borders}}</p>
+      </div>
+    </div>
+
+  </main>
+</div>

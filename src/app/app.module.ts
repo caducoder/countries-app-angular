@@ -19,9 +19,15 @@ import { DarkmodeToggleComponent } from './components/darkmode-toggle/darkmode-t
 import { ModeToggleService } from './components/darkmode-toggle/darkmode-toggle.service';
 import { MODE_STORAGE_SERVICE, ModeLocalStorageService } from './components/darkmode-toggle/darkmode-storage.service';
 import { CountriesListComponent } from './pages/countries-list/countries-list.component';
+import { CountriesDetailsComponent } from './pages/countries-details/countries-details.component';
+import { ToTopButtonComponent } from './components/to-top-button/to-top-button.component';
 
 const routes: Routes = [
-  { path: '', component: CountriesListComponent }
+  { path: '', component: CountriesListComponent },
+  {
+    path: ':country',
+    component: CountriesDetailsComponent,
+  },
 ];
 
 @NgModule({
@@ -29,7 +35,9 @@ const routes: Routes = [
     AppComponent,
     CountryCardComponent,
     DarkmodeToggleComponent,
-    CountriesListComponent
+    CountriesListComponent,
+    CountriesDetailsComponent,
+    ToTopButtonComponent
   ],
   imports: [
     BrowserModule,

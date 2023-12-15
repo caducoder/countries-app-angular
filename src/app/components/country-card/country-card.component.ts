@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { ModeToggleService } from '../darkmode-toggle/darkmode-toggle.service';
 import { Mode } from 'src/app/model/darkmode';
 
@@ -10,7 +11,9 @@ import { Mode } from 'src/app/model/darkmode';
 export class CountryCardComponent {
   currentMode: Mode = Mode.LIGHT
 
-  constructor(private modeToggleService: ModeToggleService) {
+  constructor(
+    private modeToggleService: ModeToggleService
+  ) {
     this.modeToggleService.modeChanged$.subscribe((mode: Mode) => {
       this.currentMode = mode;
     });
