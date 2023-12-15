@@ -49,7 +49,6 @@ export class CountriesListComponent {
   }
 
   filterByName(text: string) {
-    console.log(text)
     if (!text) {
       this.filteredCountries = this.countries
       return

@@ -11,11 +11,19 @@ export interface NativeName {
   por: Por;
 }
 export interface TinyCountry {
-  name: Name,
+  name: Name;
   capital?: string | null;
   region: string;
   population: string;
-  flagUrl: string
+  flagUrl: string;
+}
+export interface CountryDetails extends TinyCountry {
+  currencies: string | undefined;
+  nativeName?: string;
+  languages: string;
+  borders?: (string)[] | null;
+  tld?: string[] | null;
+  subregion: string;
 }
 export interface Country {
   name: Name;
@@ -33,7 +41,7 @@ export interface Country {
   altSpellings?: (string)[] | null;
   region: string;
   subregion: string;
-  languages: Languages;
+  languages: string[];
   translations: Translations;
   latlng?: (number)[] | null;
   landlocked: boolean;
