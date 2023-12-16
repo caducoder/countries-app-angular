@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <p *ngIf="filteredCountries.length == 0" [ngStyle]="{ 'text-align': 'center', 'color': '#fff'}">
+    <p *ngIf="filteredCountries.length == 0" [ngClass]="currentMode" [ngStyle]="{ 'text-align': 'center'}">
       Country not found.
     </p>
     <section class="countries-list">
