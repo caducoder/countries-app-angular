@@ -22,6 +22,9 @@
       </div>
     </div>
 
+    <p *ngIf="filteredCountries.length == 0" [ngStyle]="{ 'text-align': 'center', 'color': '#fff'}">
+      Country not found.
+    </p>
     <section class="countries-list">
       <app-country-card *ngFor="let ct of filteredCountries" name="{{ct.name.common}}" population="{{ct.population}}"
         capital="{{ct.capital}}" region="{{ct.region}}" flag="{{ct.flagUrl}}">
