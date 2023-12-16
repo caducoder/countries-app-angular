@@ -6,9 +6,13 @@ import { CountriesListComponent } from "./pages/countries-list/countries-list.co
 const routes: Routes = [
   { path: '', component: CountriesListComponent },
   {
-    path: ':country',
+    path: 'country/:country',
     component: CountriesDetailsComponent,
   },
+  {
+    path: '**',
+    redirectTo: '/',
+  }
 ];
 
 @NgModule({
