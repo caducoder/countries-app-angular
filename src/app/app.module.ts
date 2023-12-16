@@ -21,14 +21,8 @@ import { MODE_STORAGE_SERVICE, ModeLocalStorageService } from './components/dark
 import { CountriesListComponent } from './pages/countries-list/countries-list.component';
 import { CountriesDetailsComponent } from './pages/countries-details/countries-details.component';
 import { ToTopButtonComponent } from './components/to-top-button/to-top-button.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const routes: Routes = [
-  { path: '', component: CountriesListComponent },
-  {
-    path: ':country',
-    component: CountriesDetailsComponent,
-  },
-];
 
 @NgModule({
   declarations: [
@@ -51,7 +45,7 @@ const routes: Routes = [
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [
     ModeToggleService,
