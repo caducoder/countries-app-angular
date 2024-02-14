@@ -1,27 +1,39 @@
-# CountriesApp
+<p align="center">
+<img alt="Countries App" title="Countries App" src="https://github.com/caducoder/countries-app-angular/blob/main/public/countries-app-angular-preview.png?raw=true" width="100%" />
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
+<br/>
 
-## Development server
+# Countries App
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+> Countries App | Listagem de países
 
-## Code scaffolding
+## 💻 Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Lista com 249 países com detalhes de cada um. A lista pemite filtrar por continente, pesquisa pelo nome e está 100% responsivo
 
-## Build
+### 📄 O que foi usado:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular
+- Typescript
 
-## Running unit tests
+### 🛠 Mão na massa:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> Você pode realizar o clone deste repositório!
 
-## Running end-to-end tests
+Clone o repositório:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+`git clone https://github.com/caducoder/countries-app-angular
+`
 
-## Further help
+### 💻 Executando o projeto 🚀
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Na raiz do projeto, execute os comandos:
+
+# Para instalar as dependências
+
+npm install
+
+# Para startar o projeto utilize
+
+npm start
